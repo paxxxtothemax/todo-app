@@ -5,6 +5,7 @@ class TasksController < ApplicationController
   # GET /tasks.json
   def index
     @tasks = Task.all
+
   end
 
   # GET /tasks/1
@@ -17,12 +18,14 @@ class TasksController < ApplicationController
 
   def help
   end
-    
-  end
 
   # GET /tasks/new
   def new
     @task = Task.new
+
+  end
+
+  def today
   end
 
   # GET /tasks/1/edit

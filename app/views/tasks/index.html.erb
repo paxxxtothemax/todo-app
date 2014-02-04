@@ -1,12 +1,21 @@
-<h1>Listing tasks</h1>
+<h1>What do I need to do?</h1>
+</br>
+</br>
+<%= link_to 'New Task', new_task_path %>
+
+</br>
+</br>
+</br>
+
 
 <table>
   <thead>
     <tr>
       <th>Task</th>
+      <th> </th><th> </th><th> </th>
       <th>Category</th>
-      <th>Due date</th>
-      <th>Status</th>
+      <th> </th><th> </th><th> </th>
+      <th>Due Date</th>
       <th></th>
       <th></th>
       <th></th>
@@ -17,17 +26,20 @@
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.task %></td>
+        <th> </th><th> </th><th> </th>
         <td><%= task.category %></td>
+        <th> </th><th> </th><th> </th>
         <td><%= task.due_date %></td>
-        <td><%= task.status %></td>
+        <th> </th><th> </th><th> </th>
         <td><%= link_to 'Show', task %></td>
+        <th> </th><th> </th><th> </th>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th> </th><th> </th><th> </th>
+        <td><%= link_to 'Complete', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Task', new_task_path %>
+
